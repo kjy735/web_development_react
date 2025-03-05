@@ -30,8 +30,8 @@
 // 그리고 20250225에 배운 객체의 구조분해를 이용할 수도 있습니다
 
 
-function Hello4({firstName, lastName}) {
-  return <h1>Hello {firstName} {lastName} </h1>
-}
+// function Hello4({firstName, lastName}) {
+//   return <h1>Hello {firstName} {lastName} </h1>
+// }
 
-export default Hello4
+// export default Hello4

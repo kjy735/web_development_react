@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 // import App2 from './App2.jsx'
-// import Hello from './Hello.jsx'
+// import Hello1 from './Hello.jsx'
+// import Hello2 from './Hello.jsx'
 // import Hello3 from './Hello.jsx'
 // import Hello4 from './Hello.jsx'
 // import App3 from './App3.jsx'
@@ -24,7 +25,8 @@ import ReactDOM from 'react-dom/client'
 // import MyTable from './MyTable'
 // import MyForm from './MyForm2'
 // import MyForm from './MyForm3'
-import MyForm from './MyForm4'
+// import MyForm from './MyForm4'
+import Test from './Test'
 import './index.css'
 
 
@@ -46,6 +48,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     {/* <MyList />/ */}
     {/* <MyTable />/ */}
-    <MyForm />
+    {/*<MyForm />*/}
+    <Test text="d"/>
   </React.StrictMode>,
 )
