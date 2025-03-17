@@ -11,7 +11,7 @@ function App() {
       gender: "female",
     },
     {
-      title: "Psycho",
+      title: "Feel My Rhythm",
       artist: "Red Velvet",
       releaseDate: "2022.03.21",
       gender: "female",
@@ -34,7 +34,7 @@ function App() {
       releaseDate: "2022.09.22",
       gender: "male",
     },
-  ]
+  ];
 
   const [playlist, setPlayList] = useState(data);
 
@@ -43,7 +43,7 @@ function App() {
       <h1>K-POP 플레이 리스트</h1>
       <Main data={data} playlist={playlist} setPlayList={setPlayList} />
     </>
-  )
+  );
 }
 
 export default App;

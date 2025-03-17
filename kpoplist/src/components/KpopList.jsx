@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
-import React from "react";
 
-function KpopList({playlist}) {
+function KpopList({ playlist }) {
   return(
     <ul>
       {playlist.map((song) => (

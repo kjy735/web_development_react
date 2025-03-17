@@ -1,23 +1,20 @@
-// props로 data, setPlayList를 전달받을 예정
-import App from '../App.jsx';
-import React from 'react';
-
-function Button({data, setPlayList, filterType, children}) {
+function Button({data, setPlaylist, filterType, children}) {
   const handleClick = () => {
-      // 버튼의 내용에 따라 플레이리스트를 필터링
       let result = [...data];
-    
-      if(filterType === '📌레드벨벳 노래 찾기') {
+
+      // 필터링 조건 적용
+      if(filterType === "redvelvet") {
         result = data.filter((song) => song.artist === "Red Velvet");
       }
-      if(filterType === '📌남자 아티스트 노래 찾기') {
+      if(filterType === "male") {
         result = data.filter((song) => song.gender === "male");
       }
-      if(filterType === '📌 여자 아티스트 노래 찾기') {
+      if(filterType === "female") {
         result = data.filter((song) => song.gender === "female");
       }
     
-    setPlayList(result);
+      // setPlaylist를 이용하여 상태 업데이트
+      setPlaylist(result);
   };
   
   return(
