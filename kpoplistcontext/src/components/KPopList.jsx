@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { KpopContext } from "../context/context";
+import { KPopContext } from "../context/context";
 
 function KPopList() {
-  const {playList} = useContext(KpopContext); // 여기서 사용하기 때문에 생성
+  const {playList} = useContext(KPopContext); // 여기서 사용하기 때문에 생성
 
   return (
     <ul>
