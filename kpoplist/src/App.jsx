@@ -36,12 +36,12 @@ function App() {
     },
   ];
 
-  const [playlist, setPlayList] = useState(data);
+  const [playlist, setPlaylist] = useState(data);
 
   return (
     <>
       <h1>K-POP 플레이 리스트</h1>
-      <Main data={data} playlist={playlist} setPlayList={setPlayList} />
+      <Main data={data} playlist={playlist} setPlaylist={setPlaylist} />
     </>
   );
 }
