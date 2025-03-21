@@ -19,7 +19,7 @@ const Reducer = (state, action) => {
         isLogin: false,
         message: '비밀번호를 잘못 입력했습니다',
       };
-    case "LOIN_FAILURE":
+    case "LOGIN_FAILURE":
       return {
         ...state,
         isLogin: false,
