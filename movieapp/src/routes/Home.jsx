@@ -1,10 +1,9 @@
-import '../App.css';
-import { useState, useEffect } from 'react';
-import Movie from '../components/Movie';
+import { useEffect, useState } from "react";
+import "./Home.css";
+import Movie from "../components/Movie";
 
-
-function Home() {
-  const [ loading, setLoading ] = useState(true);
+export default function Home() {
+  const [ loading , setLoading ] = useState(true);
   const [ movies, setMovies ] = useState([]);
 
   const getMovies = async () => {
@@ -12,30 +11,32 @@ function Home() {
     const json = await response.json();
     setMovies(json.data.movies);
     setLoading(false);
-  };
+  }
 
   useEffect(() => {
     getMovies();
-  }, []);
-
+  }, [])
+  
   return (
-    <div>
-  { loading ? (<h1>Loading...</h1> 
-  ):( 
-  <div>
-    {movies.map((movie =>
-      <Movie 
-        key={movie.id}
-        id={movie.id}
-        coverImg={movie.medium_cover_image}
-        title={movie.title}
-        summary={movie.summary}
-        genres={movie.genres}
-        />
-      ))}</div>
+    <div className="home-container">
+      {loading ? (
+        <h1 className="home-loading">로딩 중...</h1>
+      ) : (
+        <div className="movie-grid">
+          {movies.map((movie) => (
+            <Movie 
+              key={movie.id}
+              id={movie.id}
+              coverImg={movie.medium_cover_image}
+              title={movie.title}
+              summary={movie.summary}
+              genres={movie.genres}
+            />
+          ))}
+        </div>
       )}
+    
     </div>
   );
-}
 
-export default Home;
+}
